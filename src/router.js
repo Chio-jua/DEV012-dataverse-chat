@@ -42,7 +42,7 @@ const renderView = (pathname, props = {}) => {
 
 export const navigateTo = (pathname, props = {}) => {
   // update window history with pushState
-  const URLvisited = window.location.origin + pathname;
+  //const URLvisited = window.location.origin + pathname;
   window.history.pushState(
     {},
     pathname,

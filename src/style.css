@@ -1,209 +1,656 @@
+/*Diseño de la página de main*/
+
 body {
-    background: linear-gradient(rgb(116, 16, 111), rgb(26, 57, 97), rgb(25, 25, 92), rgb(6, 17, 6));
+  background-color: #2874a6;
 }
 
-header{
-    margin: 5px;;
+header {
+  color: #fff;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px;
 }
 
-h1{
-        column-span: all;
-        font-family: system-ui;
-        color: rgb(55 192 235);
-        font-size: 60px;
-
+.botonLimpiar{
+  background-color: #fff;
+  padding: 5px;
+  margin: 10px;
 }
 
-h2 {
-        column-span: all;
-        font-family: cursive;
-        color: rgb(236, 239, 240);
-        text-align: center;
-        font-size: 25px;
+.filtros {
+  margin-left: 3%;
+  color: #fff;
+  font-size: medium;
+  font-weight: 300;
+  display: flex;
+  margin-top: 5px;
+  width: 15%;
+  flex-direction: column;
+  position: fixed;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+  background-color: #da6e92;
+  background-size: cover;
 }
 
-
-
-#imagen {
-    
-    width: 100%;
-    height: 50%;
-    text-align: center;
+.filtroEst {
+  padding: 15px;
 }
 
-#imagen img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+.ordenamientoEst {
+  padding: 15px;
+}
+
+.estadistica {
+  display: block;
 }
 
 select {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  padding: 5px;
+  margin-top: 10px;
 }
 
-#estadistica{
-    color: white;
+label {
+  font-family: "verdana";
 }
 
-#filtros{
-    display: flex;
-    color: rgb(246, 246, 248);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+select,
+#conteo {
+  font-family: "verdana";
 }
 
-#tipo{
-    margin-left: 40px;
+li dd,
+.li dd {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin: 5px;
+  color: #222323;
 }
 
-#tipo2{
-    margin-left: 80px;
-    margin-right: 150px;
-}
-
-.imag{
-    width: 200px;
-    height: 200px;
-}
-
-#root{
-    display: flex;
+.imag {
+  width: 200px;
+  height: 200px;
 }
 
 .ulClass {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: 20%;
+  margin-top: 10px;
 }
 
 .liClass {
-    border-top: 3px solid #000;
-    border-right: 3px solid #000;
-    border-bottom: 3px solid #000;
-    border-left: 3px solid #000;
-    border-radius: 10px;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    margin-bottom: 30px;
-    margin-right: 30px;
-    flex: 1;    
-    color: aqua navajowhite;
-    background-color: rgb(253, 253, 250);
-    text-align: center;    
-    max-width: 400px;
-    flex-direction: row;
-    flex-direction: column;
-}
-
-.liClass .imag{
-    justify-content: center;
-}
-
-.liClass dt {
-    color: rgb(16, 26, 138);
-    text-align: left;
-    line-height: 1.5;
-    font-size: 20px;
-    margin-left: 30px;
-}
-
-.liClass dd{
-    color: rgb(15, 133, 191);
-    text-align: left;
-    margin-bottom: 10px;
-    font-size: 18px;
-    margin-left: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  background-color: #f2c343;
+  text-align: center;
+  width: 450px;
+  flex-direction: column;
+  column-count: 2;
+  list-style-type: none;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1px;
-    text-align: center;
+  color: #fff;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.5cm;
+  font-weight: 300;
 }
 
-
-button {
-    background-color: darkgrey;
+/*Diseño chat general*/
+.cajaChatGeneral {
+  margin: auto;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  top: -400px;
 }
 
-#estadistica {
-    font-family: arial;
+.IconoChatGeneral {
+  margin-left: 700px;
+  margin-top: 200px;
+}
+
+.cajaPrincipalChatG {
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  place-items: center;
+  justify-content: center;
+  
+}
+
+.tarjeta dd,
+.tarjeta dd {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-size: x-large;
+  color: #222323;
+  padding: 7px;
+}
+
+.tarjeta .imag {
+  padding: 15px;
+  height: 180px;
+  width: 180px;
+  border-radius: 15%;
+}
+
+.tarjeta {
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px;
+  margin:auto;
+  margin-left: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  margin-bottom: 30px;
+  background-color: #f2c343;
+  text-align: center;
+  height: 300px;
+  width: 320px;
+
+}
+
+.ulCG {
+  display: block;
+  justify-content: center;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y:scroll;
+  height: 10cm;
+  width: 8cm;
+  margin-top: 1cm;
+
+}
+
+.otraCaja {
+  display: block;
+  flex-direction: column;
+  column-count: 2;
+
+
+}
+
+/*Diseño de la imagen del chat individual*/
+.contPer {
+  margin: auto;
+}
+
+div.contDetails {
+  /*este contenedor contiene la imagen y el elemento li de los datos del personaje para poder hacerlo responsive*/
+  display: flex;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
+  background-color: #f2c343;
+  text-align: center;
+  flex-direction: column;
+  width: 450px;
+  list-style-type: none;
+}
+
+.li .imag {
+  width: 350px;
+  height: 350px;
+}
+
+/*Diseño chat individual dentro de la vista del personaje*/
+.chatPersonaje {
+  margin-top: 15px;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0px;
+  justify-content: center;
+  border-right-color: 10px #fff;
+  margin-left: auto;
+}
+
+.botonEnviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #8c61a3;
+  height: 45px;
+  width: 3cm;
+  font-size: 0.5cm;
+  border-radius: 10px;
+}
+
+.chat {
+  display: block;
+  justify-content: left;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: visible;
+  height: 450px;
+  width: 800px;
+  resize: none;
+  background-color: #da6e92;
+  font-family: Courier, sans-serif;
+  border-radius: 10px 20px 10px 20px;
+  color: #fff;
+  font-size: 0.6cm;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.textArea {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-family: Courier, sans-serif;
+  font-size: larger;
+  margin-top: 10px;
+  height: 50px;
+  width: 795px;
+  resize: none;
+  background-color: #2d405a;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.7;
+  padding: 20px;
+}
+
+.mensaje {
+  margin-top: 0.2cm;
+  margin-left: 1cm;
+}
+
+.iconosChatIndividual {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 25px;
+  margin-right: 60px;
+  width: 5cm;
+}
+
+.botonesP{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  width: 15cm;
+  padding: 15px;
+}
+/*Diseño vista Error*/
+ .botonLimpiarApi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto; 
+  height: 45px;
+  width: 7cm;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #8c61a3;
+  font-size: medium;
+}
+.errorApi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto; 
+  height: 60px;
+  width: 7cm;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #8c61a3;
+  font-size: medium;
+}
+
+.contenedorImagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 55px;
+}
+
+.imagenError {
+  width: 550px;
+  height: auto;
+}
+
+/*Diseño vista Api Key*/
+
+.apiTitulo {
+  margin-top: 5px;
+  font-size: 1cm;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.apiKey  {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#password{
+  display: block;
+  height: 1cm;
+  width: 8cm;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  background-color: #e3cd93;
+  border: #222323;
+  border-radius: 5px;
+}
+
+.botonApiKey {
+  width: 150px;
+  border-radius: 10px;
+  font-size: 0.6cm;
+  font-weight: bold;
+  background-color: #e3cd93;
+}
+
+.botonChatGeneral {
+  margin-top: 50px;
+  width: 120px;
+  margin-right: 50px;
+  border-radius: 10px;
+  font-size: 0.6cm;
+  font-weight: bold;
+  background-color: #e3cd93;
+}
+
+.botonChatIndividual {
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 150px;
+  border-radius: 10px;
+  font-size: 0.6cm;
+  font-weight: bold;
+  background-color: #e3cd93;
+}
+
+/*codigo para dar formato a los íconos de navegación*/
+
+.iconos {
+  display: flex;
+  gap: 40px;
+  justify-content: right;
+  margin-right: 110px;
+  margin-top: 50px;
+}
+
+.iconHome,
+.iconChat {
+  color: #2d405a;
+  font-size: 45px;
+}
+
+@media screen and (max-width: 1080px) {
+  /*Codigo responsive para la página de HOME*/
+
+  body {
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-left: 30px;
+  }
+
+  .imag {
+    width: 90px;
+    height: 90px;
+    justify-content: center;
+  }
+
+  .liClass {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    font-size: small;
+    margin-bottom: 12px;
+    width: 4.5cm;
+    height: 6.3cm;
+  }
+
+  .ulClass {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0.5cm;
+  }
+
+  .liClass dt {
+    font-size: 10px;
+    margin-left: 15px;
+    margin-top: 2px;
+    margin: auto;
+  }
+
+  .liClass dd {
+    margin-bottom: 5px;
+    font-size: 9px;
+    margin: auto;
+  }
+
+  footer {
+    margin-right: -30px;
+  }
+
+  .filtros {
+    display: flex;
+    justify-self: center;
+    position: relative;
+    margin: auto;
+    margin-left: 130px;
+    height: 5cm;
+    width: 5cm;
+    font-size: small;
     font-weight: bold;
-    color: #b5b5cd;
-    text-align: end;
+  }
+
+  .filtroEst,
+  .ordenamientoEst {
+    padding: 5px;
+    font-size: small;
+  }
+
+  .estadistica {
+    display: flex;
+  }
+
+  select {
+    display: flex;
+    padding: 1px;
+    margin-top: 5px;
+    font-size: small;
+  }
+
+  .iconos {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 25px;
     margin-right: 30px;
-} 
+  }
 
-@media screen and (max-width: 767px) {
-
-    h1{
-        font-size: 30px;
+  .IconoApi {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0.2cm;
 }
 
-h2 {
-        font-size: 12px;
-}
-    #imagen img {
-        width: 110%;
-        height: 50px;
-        margin-right: 10px;
-    }
 
-    .imag{
-        width: 90px;
-        height: 90px;
-    }
+  /*Codigo responsive para el chat individual y para chat general*/
 
-    select {
-        font-size: 8px;
-    }
+  .chatPersonaje {
+    display: flex;
+    justify-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+    column-count: 1;
+  }
 
-    #filtros{
-        font-size: 12px;
-    }
+  div.contDetails {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 200px;
+    height: 360px;
+    font-size: small;
+  }
 
-    #tipo{
-        margin-left: 10px;
-    }
+  div.contDetails .imag {
+    width: 175px;
+    height: 175px;
+  }
+
+  .chat {
+    display: block;
+    margin-top: 5%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 180px;
+    width: 320px;
+    resize: none;
+  }
+
+  .textArea {
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+    height: 35px;
+    width: 316px;
+    resize: none;
+  }
+
+  .botonEnviar {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-size: large;
+    justify-content: center;
+    height: 40px;
+    width: 80px;
+  }
+
+  .botonLimpiarApi {
+    display: block;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .footer {
+    margin-top: 100%;
+  }
+
+  .otraCaja {
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+    column-count: 1;
     
-    #tipo2{
-        margin-left: 30px;
-        margin-right: 90px;
-    }
+  }
+  .cajaPrincipalChatG {
+    display:block;
+    justify-content: center;
+    margin:auto;
+    margin-left:0.3cm;
+   
+   
+  }
+  
+  .tarjeta dt,
+  .tarjeta dd {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: #222323;
+    font-size: medium;
+  }
+  
+  .tarjeta .imag {
+    height: 80px;
+    width: 80px;
+    border-radius: 15%;
+  }
+  
+  .tarjeta {
+    box-sizing: border-box;
+    justify-content: center;
+    border-radius: 10px;
+    margin:auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    background-color: #f2c343;
+    text-align: center;
+    height: 6cm;
+    width: 5cm;
+  
+  }
+  
 
-    button {
-        font-size: 7px;
-    }
+  .ulCG {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+    height: 5cm;
+    width: 7cm;
+  
+  }
 
-    .liClass {
-        border-top: 1.5px solid #000;
-        border-right: 1.5px solid #000;
-        border-bottom: 1.5px solid #000;
-        border-left: 1.5px solid #000;
-        padding: 10px;
-        font-size: small;
-        margin-bottom: 8px;
-        margin-right: 8px;
-    }
+  /*Codigo de imagen de error*/
 
-    .liClass dt {
-        line-height: 1.5;
-        font-size: 10px;
-        margin-left: 15px;
-    }
-    
-    .liClass dd{
-        margin-bottom: 5px;
-        font-size: 9px;
-        margin-left: 8px;
-    }
-    #estadistica {
-        margin-right: 15px;
-    } 
+  .contenedorImagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 55px;
+    margin-top: 200px;
+  }
 
-    footer {
-        margin-right: -30px;
-    }
+  .imagenError {
+    width: 300px;
+    height: auto;
+  }
+
+  /*vista responsiva del chat general*/
 }

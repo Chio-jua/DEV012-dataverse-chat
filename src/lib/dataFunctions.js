@@ -6,7 +6,8 @@ export const filterData = (data, filterBy, value) => {
 export const sortData = (data, sortBy, sortOrder) => {
   if (sortOrder === "asc") {
     return data.slice().sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
-  } else if (sortOrder === "desc") {
+  }
+  if (sortOrder === "desc") {
     return data.slice().sort((a, b) => b[sortBy].localeCompare(a[sortBy]));
   }
 };
@@ -18,6 +19,5 @@ export const computeStats = (data) => {
     0
   );
 
-  //console.log(sumaTotal);
   return sumaTotal;
 };

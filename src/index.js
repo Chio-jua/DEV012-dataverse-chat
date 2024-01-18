@@ -1,44 +1,30 @@
-// En este archivo definirás tus rutas e importarás los componentes que vas a renderizar.
-
-/*
-import Example from './views/Example.js';
-
-Ejemplo de definición de rutas:
-
-const routes = {
-    "/": Example,
-    ...
-}
-*/
-
-/*
-TODO:
-1.- Definir rutas en router.
-2.- Pasar "root element" a router.
-3.- Invocar el router para renderizar la vista correcta.
-*/
-import {Home} from './views/Home';
-// ... import other views
+import { Home } from './views/Home.js';
+import { Personaje } from './views/Personaje.js';
 import { setRootEl, setRoutes, onURLChange } from './router.js';
+import { Error } from './views/Error.js';
+import { contenedorAPI } from './views/Apikey.js';
+import { chatgeneral } from './views/Chatgeneral.js';
 
-// Define your routes and their associated views
+// Rutas
 const routes = {
-  "/": Home,
-  "/error" : 'Hola',
+  '/': Home,
+  '/error': Error,
+  '/personaje': Personaje,
+  '/apikey': contenedorAPI,
+  '/chatgeneral': chatgeneral,
 };
 
 const viewContainer = document.getElementById('root');
 
-// Assign the routes
+// Asignación de rutas
 setRoutes(routes);
 
 setRootEl(viewContainer);
 
-
-// Set the root element where views will be rendered
-document.addEventListener("DOMContentLoaded", (event) => {
- onURLChange(event.target.location.pathname);
-    
+// Elemento root donde las vistas se van a renderizar
+document.addEventListener('DOMContentLoaded', () => {
+  onURLChange(window.location.pathname);
 });
-
-
+window.addEventListener('popstate', function (event) {
+  onURLChange(this.document.location, event.state);
+});

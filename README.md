@@ -1,4 +1,4 @@
-# Dataverse Chat
+# Conversational AI web application integrating external LLM APIs, prompt engineering, and structured dataset filtering.
 
 El proyecto consiste en el desarrollo de una Single Page Application (SPA). En la página principal (Home) se visualizan tarjetas con el nombre, imagen, género, número de albumes, etc., de algunos artistas que pertenecen a los géneros pop, rock y cumbia. Estas tarjetas se pueden filtrar por género; ordenar de manera ascendende (A-Z) y descendente (Z-A); también podremos calcular el número de albumes por género. Al final de cada vista se encuentra el footer con los datos de quiénes realizan este proyecto. En la parte superior de esta vista se encuentras tres íconos que son los siguientes:
 * Ícono de Home: está representado con una casa amarilla, se encuentra presente en todas las vistas para el usuario pueda regresar a la página principal.
